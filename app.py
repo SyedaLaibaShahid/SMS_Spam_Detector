@@ -12,7 +12,7 @@ tfidf = pickle.load(open("tfidf.pkl", "rb"))
 
 
 spam_keywords = [
-    "approved", "loans", "Visit", "viagra", "lottery", "win", "cash", "gift","verify", "risk", "offer", "exclusive", "%", "click", "info", "free coupon", "free card", "free gift", "Contact us", "reward"
+    "approved", "loans", "Visit", "viagra", "lottery", "win", "cash", "gift","verify", "risk", "offer", "exclusive", "%", "click", "info", "coupon", "gift", "Contact us", "reward"
 ]
 
 
