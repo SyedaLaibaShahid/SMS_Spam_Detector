@@ -48,12 +48,13 @@ st.markdown(
     "Messages flagged with spam keywords are highlighted."
 )
 
-user_input = st.text_area("Enter your SMS message here:", height=150)
-
 bulk_input = st.checkbox("Test multiple SMS at once (one per line)")
 
 if bulk_input:
     user_input = st.text_area("Enter multiple SMS messages (one per line):", height=300)
+else:
+    user_input = st.text_area("Enter your SMS message here:", height=150)
+
 
 if st.button("Predict"):
     if not user_input.strip():
