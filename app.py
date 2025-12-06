@@ -12,7 +12,7 @@ tfidf = pickle.load(open("tfidf.pkl", "rb"))
 
 
 spam_keywords = [
-    "Visit", "viagra", "lottery", "win", "cash", "gift","verify", "risk", "offer", "exclusive", "%", "click", "info", "free coupon", "free card", "free gift"
+    "Visit", "viagra", "lottery", "win", "cash", "gift","verify", "risk", "offer", "exclusive", "%", "click", "info", "free coupon", "free card", "free gift", "contact us", "call this number"
 ]
 
 
@@ -66,8 +66,7 @@ if st.button("Predict"):
             label, matched_keywords = predict_sms(sms, model, tfidf)
             results.append({
                 "SMS": sms,
-                "Prediction": label,
-                "Matched Keywords": ", ".join(matched_keywords) if matched_keywords else "None"
+                "Prediction": label
             })
 
         df_results = pd.DataFrame(results)
