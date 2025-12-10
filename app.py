@@ -42,6 +42,21 @@ def predict_sms(sms, model, tfidf):
 
 
 st.set_page_config(page_title="SMS Spam Detection", page_icon="📩", layout="wide")
+st.markdown("""
+<style>
+
+.stApp a.anchor-link {
+    display: none !important;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    user-select: none !important;
+    cursor: default !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("SMS Spam Detection")
 st.markdown(
     "This app detects **Spam vs Ham** SMS messages using a hybrid approach: **ML model + keyword rules**. "
